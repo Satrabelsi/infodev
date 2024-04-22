@@ -10,33 +10,23 @@
   */
   authors:
   (
-    (
-      name: "Abdelbacet Mhamdi",
-      department: [Senior-lecturer, Dept. of EE],
-      organization: [ISET Bizerte --- Tunisia],
-      profile: "a-mhamdi",
-    ),
+   
 
-    /*
+   
     (
-      name: "Student 1",
+      name: "Samar Trabelsi",
       department: [Dept. of EE],
       organization: [ISET Bizerte --- Tunisia],
-      profile: "abc",
+      profile: "Satrabelsi",
     ),
     (
-      name: "Student 2",
+      name: "Nehed Ouhibi",
       department: [Dept. of EE],
       organization: [ISET Bizerte --- Tunisia],
-      profile: "abc",
+      profile: "N1ehed",
     ),
-    (
-      name: "Student 3",
-      department: [Dept. of EE],
-      organization: [ISET Bizerte --- Tunisia],
-      profile: "abc",
-    )
-  */
+ 
+ 
 
   )
   // index-terms: (""),
@@ -44,12 +34,9 @@
 )
 
 = Exercise
-In this lab, you will create a basic web application using *Genie* framework in Julia. The application will allow us to control the behaviour of a sine wave, given some adjustble parameters. You are required to carry out this lab using the REPL as in @fig:repl.
+In this lab, we will create a basic web application using *Genie* framework in Julia. The application will allow us to control the behaviour of a sine wave, given some adjustble parameters. 
 
-#figure(
-	image("Images/REPL.png", width: 100%, fit: "contain"),
-	caption: "Julia REPL"
-	) <fig:repl>
+
 
 #exo[Sine Wave Control][We provide the Julia and HTML codes to build and run a web app that allows us to control the amplitude and frequency of a sine wave. *Plotly* is used to plot the corresponding graph. We also added a slider to change the number of samples used to draw the figure. The latter setting permits to grasp the influence of sampling frequency on the look of our chart.]
 
@@ -59,10 +46,9 @@ In this lab, you will create a basic web application using *Genie* framework in 
 
 #let code=read("../Codes/web-app/app.jl.html")
 #raw(code, lang: "html")
-
-```zsh
-julia --project
-```
+And then we add two extra sliders that modify the behaviour of the sine wave graph:
+	+ _Phase_ ranging between $-pi$ and $pi$, changes by a step of $pi/100$
+	+ _Offset_ varies from $-0.5$ to $1$, by a step of $0.1$.
 
 ```julia
 julia> using GenieFramework
@@ -77,7 +63,5 @@ We can now open the browser and navigate to the link #highlight[#link("localhost
 	caption: "Genie -> Sine Wave",
 ) <fig:genie-webapp>
 
-#test[You are asked to add two extra sliders that modify the behaviour of the sine wave graph:
-	+ _Phase_ ranging between $-pi$ and $pi$, changes by a step of $pi/100$
-	+ _Offset_ varies from $-0.5$ to $1$, by a step of $0.1$.]
+
 
